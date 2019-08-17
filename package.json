@@ -1,0 +1,33 @@
+{
+  "name": "avtale-tools",
+  "version": "1.0.0",
+  "description": "A collection of scripts for avtaler",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && npm audit",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm i",
+    "standard-fix": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/telemark/avtale-tools.git"
+  },
+  "keywords": [],
+  "author": "Geir Gåsodden <geir.gasodden@pythonia.no> (https://github.com/zrrrzzt)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/telemark/avtale-tools/issues"
+  },
+  "homepage": "https://github.com/telemark/avtale-tools#readme",
+  "engines": {
+    "node": ">=10.16.3"
+  },
+  "dependencies": {
+    "dotenv": "8.0.0",
+    "mongodb": "3.3.0",
+    "nanoid": "2.0.3"
+  },
+  "devDependencies": {
+    "standard": "13.1.0"
+  }
+}
