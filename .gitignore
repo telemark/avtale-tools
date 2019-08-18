@@ -70,3 +70,5 @@ typings/
 
 # Saved files
 fresh-avtaler.json
+avtaler-query.json
+avtaler-downloaded.json
