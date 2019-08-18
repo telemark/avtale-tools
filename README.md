@@ -59,6 +59,14 @@ Saves result to `data/avtaler-downloaded.json`
 $ node utils/check-avtaler-template.js
 ```
 
+### `send-sms-messages`
+
+Generates and sends sms for every avtale in `data/avtaler-query.json`
+
+```
+$ node utils/send-sms-messages.js
+```
+
 # License
 
 [MIT](LICENSE)
