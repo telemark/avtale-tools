@@ -23,6 +23,6 @@
     await sleep(250)
   }
   logger('info', ['utils', 'check-fresh-avtaler', 'saving', result.length, 'avtaler'])
-  await writeFile('data/avtaler-downloaded.json', JSON.stringify(avtaler, null, 2), 'utf-8')
+  await writeFile('data/avtaler-downloaded.json', JSON.stringify(result, null, 2), 'utf-8')
   logger('info', ['utils', 'check-fresh-avtaler', 'finished'])
 })()

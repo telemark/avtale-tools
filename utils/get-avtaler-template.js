@@ -5,7 +5,7 @@
   const query = require('../lib/do-mongo-query')
   const logger = require('../lib/logger')
   const payload = {
-    uid: 'true',
+    isManual: true,
     canBeDigital: true,
     partOf: ''
   }
