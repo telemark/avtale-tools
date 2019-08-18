@@ -6,7 +6,8 @@
   const logger = require('../lib/logger')
   const payload = {
     partOf: '',
-    status: { $exists: false }
+    status: { $exists: false },
+    isManual: false
   }
   const avtaler = await query(payload)
   logger('info', ['utils', 'get-fresh-avtaler', `got ${avtaler.length} avtaler`])
