@@ -15,8 +15,7 @@
       const message = {
         sender: 'VgsTelemark',
         receivers: [mobileNumber],
-        message: `Husk å signere avtalen om ElevPC https://svarut.ks.no/forsendelse/${avtale.fid}/1/signering Velkommen til skolestart.`,
-        operation: 9
+        message: `Husk å signere avtalen om ElevPC https://svarut.ks.no/forsendelse/${avtale.fid}/1/signering Velkommen til skolestart.`
       }
       const result = await sendSmsMessage(message)
       if (result) {
