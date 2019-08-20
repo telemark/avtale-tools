@@ -12,6 +12,7 @@
     const avtale = avtaler.pop()
     logger('info', ['utils', 'send-sms-message', 'avtale', avtale.aid])
     const mobileNumber = await getMobilePhoneNumber(avtale.uid)
+    logger('info', ['utils', 'send-sms-message', 'avtale', avtale.aid, 'mobileNumber', mobileNumber])
     if (mobileNumber) {
       const message = {
         sender: 'VgsTelemark',
