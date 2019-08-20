@@ -1,5 +1,6 @@
 (async () => {
   require('dotenv').config()
+  const { writeFile } = require('fs').promises
   const logger = require('../lib/logger')
   const getMobilePhoneNumber = require('../lib/get-mobile-number')
   const sendSmsMessage = require('../lib/send-sms')
@@ -29,6 +30,7 @@
       failCount++
       logger('info', ['utils', 'send-sms-message', 'avtale', avtale.aid, 'mobile number not available'])
     }
+    await writeFile('data/avtaler-query.json', JSON.stringify(avtaler, null, 2), 'utf-8')
     logger('info', ['utils', 'send-sms-message', `${avtaler.length} avtaler to go`])
   }
   logger('info', ['utils', 'send-sms-message', 'finished', 'success', successCount, 'fails', failCount])
