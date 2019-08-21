@@ -3,6 +3,7 @@
   require('dotenv').config()
   const axios = require('axios')
   const sleep = require('then-sleep')
+  const { writeFile } = require('fs').promises
   const generateToken = require('../lib/generate-token')
   const logger = require('../lib/logger')
   const avtaler = require('../data/fresh-avtaler.json')
@@ -17,6 +18,7 @@
     const { data } = await axios.get(url)
     logger('info', ['utils', 'check-fresh-avtaler', 'checking', 'aid', avtale.aid, 'status', data.status])
     logger('info', ['utils', 'check-fresh-avtaler', avtaler.length, 'avtaler to check'])
+    await writeFile('data/fresh-avtaler.json', JSON.stringify(avtaler, null, 2), 'utf-8')
     await sleep(250)
   }
   logger('info', ['utils', 'check-fresh-avtaler', 'finished'])
